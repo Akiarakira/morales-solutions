@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Morales Solutions — Landing Page
 
-## Getting Started
+Marketing site for **Morales Solutions** — compliance-first outsourcing for
+customer support, sales, and regulatory operations.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16** (App Router, Turbopack)
+- **React 19**
+- **Tailwind CSS v4** (CSS-based theme via `@theme` in `app/globals.css`)
+- **Vanta.js + Three.js** (animated globe in the hero)
+- **lucide-react** (icons)
+
+## Develop
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open <http://localhost:3000>.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build (static export)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project is configured for **static export** (`output: "export"` in
+`next.config.ts`) so it can be deployed as pure front-end (Cloudflare Pages,
+Netlify, S3, GitHub Pages, etc.) until a backend is added.
 
-## Learn More
+```bash
+pnpm build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Output: `out/` — drop on any static host.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Pages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `/` — Landing (Hero w/ Vanta globe, Why Us cards, Compliance band, Services
+  + Careers blocks, dual CTA section, footer).
+- `/contact` — **Request Services** form (priority CTA from the landing).
+- `/careers` — **Apply for a Role** form.
 
-## Deploy on Vercel
+Forms are currently client-side stubs (`setTimeout` simulated submit). When the
+backend is ready, swap `handleSubmit` in `components/ContactForm.tsx` and
+`components/CareersForm.tsx` for a real `fetch()` call (e.g. Google Sheets API
+route, Supabase, etc.) and remove `output: "export"` from `next.config.ts` if
+you need server functions.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Brand tokens
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Defined in `app/globals.css` under `@theme`:
+
+| Token | Value |
+|---|---|
+| `--color-brand-red`    | `#B30634` |
+| `--color-brand-orange` | `#FF6600` |
+| `--color-brand-navy`   | `#0A0F23` |
+| `--color-brand-cream`  | `#F8E3D0` |
+
+Use as Tailwind utilities: `bg-brand-red`, `text-brand-cream`, etc. Brand
+gradients are exposed via `.brand-gradient-text` and `.brand-gradient-bg`.
