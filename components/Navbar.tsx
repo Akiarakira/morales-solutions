@@ -26,7 +26,7 @@ export default function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-brand-navy/90 backdrop-blur-xl shadow-[0_8px_30px_-16px_rgba(10,15,35,0.55)] border-b border-brand-red/20"
+          ? "bg-brand-navy-light/90 backdrop-blur-xl shadow-[0_8px_30px_-16px_rgba(10,15,35,0.55)] border-b border-brand-red/20"
           : "bg-transparent"
       }`}
     >
@@ -107,7 +107,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-brand-red/20 bg-brand-navy/95 backdrop-blur-md md:hidden">
+        <div className="border-t border-brand-red/20 bg-brand-navy-light/95 backdrop-blur-md md:hidden">
           <div className="mx-auto flex max-w-7xl flex-col gap-1 px-5 py-4 sm:px-8">
             {navLinks.map((link) => (
               <Link

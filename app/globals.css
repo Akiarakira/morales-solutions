@@ -6,6 +6,7 @@
   --color-brand-red-600: #8e0529;
   --color-brand-orange: #ff6600;
   --color-brand-navy: #0a0f23;
+  --color-brand-navy-light: #0d1536;
   --color-brand-navy-700: #131a36;
   --color-brand-navy-600: #1c2547;
   --color-brand-cream: #f8e3d0;
@@ -21,7 +22,7 @@
 }
 
 :root {
-  --background: #0a0f23;
+  --background: var(--color-brand-navy-light);
   --foreground: #f8e3d0;
 }
 
@@ -130,16 +131,24 @@ html {
 
 /* Marquee animation for industry strip */
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 .animate-marquee {
   animation: marquee 40s linear infinite;
 }
 
 @keyframes infinite-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-infinite-scroll {

@@ -21,7 +21,7 @@ export default function TwoBlocks() {
   return (
     <section
       id="services"
-      className="relative scroll-mt-24 bg-brand-navy py-24 sm:py-32"
+      className="relative scroll-mt-24 bg-brand-navy-light py-24 sm:py-32"
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="mb-14 max-w-3xl">
@@ -36,7 +36,7 @@ export default function TwoBlocks() {
 
         <div className="grid gap-6 lg:grid-cols-5">
           {/* Services — highlighted (3/5 width on desktop) */}
-          <article className="relative overflow-hidden rounded-2xl border border-brand-red/40 bg-gradient-to-br from-brand-navy-700 to-brand-navy p-8 shadow-[0_24px_80px_-32px_rgba(179,6,52,0.5)] sm:p-10 lg:col-span-3">
+          <article className="relative overflow-hidden rounded-2xl border border-brand-red/40 bg-gradient-to-br from-brand-navy-700 to-brand-navy-light p-8 shadow-[0_24px_80px_-32px_rgba(179,6,52,0.5)] sm:p-10 lg:col-span-3">
             <div
               aria-hidden
               className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand-red/20 blur-3xl"

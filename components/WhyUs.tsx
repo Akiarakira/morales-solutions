@@ -26,7 +26,7 @@ const pillars = [
 
 export default function WhyUs() {
   return (
-    <section id="why-us" className="py-24 bg-brand-navy relative overflow-hidden">
+    <section id="why-us" className="py-24 bg-brand-navy-light relative overflow-hidden">
       {/* Background Accent */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-red/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="container mx-auto px-6 relative z-10">

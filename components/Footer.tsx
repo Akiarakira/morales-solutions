@@ -32,7 +32,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-brand-navy text-white">
+    <footer className="relative bg-brand-navy-light text-white">
       <div className="h-1 w-full bg-linear-to-r from-brand-red to-brand-orange" />
 
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">

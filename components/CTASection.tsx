@@ -3,7 +3,7 @@ import { ArrowUpRight, Briefcase, Users2 } from "lucide-react";
 
 export default function CTASection() {
   return (
-    <section className="relative bg-brand-navy py-24 sm:py-32">
+    <section className="relative bg-brand-navy-light py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="mx-auto mb-14 max-w-2xl text-center">
           <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-orange">

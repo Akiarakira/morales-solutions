@@ -28,7 +28,7 @@ export default function Hero() {
         minWidth: 200,
         scale: 1.0,
         scaleMobile: 1.0,
-        backgroundColor: 0x0a0f23,
+        backgroundColor: 0x0d1536,
         color: 0xff6600, // primary points — brand orange
         color2: 0xb30634, // connecting lines — muted warm gray
         size: 0.55,
@@ -50,12 +50,12 @@ export default function Hero() {
       <div
         ref={vantaRef}
         aria-hidden
-        className="absolute inset-0 -z-10 bg-brand-navy"
+        className="absolute inset-0 -z-10 bg-brand-navy-light"
       />
       {/* Overlays for legibility */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-linear-to-b from-brand-navy/30 via-brand-navy/40 to-brand-navy"
+        className="absolute inset-0 -z-10 bg-linear-to-b from-brand-navy-light/30 via-brand-navy-light/40 to-brand-navy-light"
       />
       <div
         aria-hidden
@@ -124,7 +124,7 @@ export default function Hero() {
       {/* fade to next section */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-linear-to-b from-transparent to-brand-navy"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-linear-to-b from-transparent to-brand-navy-light"
       />
     </section>
   );
