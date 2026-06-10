@@ -59,7 +59,7 @@ export default function WhyUs() {
                   <div className="p-3 rounded-lg bg-brand-red/10 text-brand-red group-hover:scale-110 transition-transform duration-500">
                     <pillar.icon size={28} />
                   </div>
-                  <span className="font-jakarta text-4xl font-black text-brand-cream/5 group-hover:text-brand-red/10 transition-colors">
+                  <span className="font-jakarta text-4xl font-black text-brand-cream/70 group-hover:text-brand-red/30 transition-colors">
                     {pillar.id}
                   </span>
                 </div>

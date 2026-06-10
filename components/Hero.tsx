@@ -79,13 +79,19 @@ export default function Hero() {
             Compliant · Scalable · Secure
           </div>
 
-          <h1 className={`mt-6 font-sans text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl ${isLight ? 'text-brand-navy' : 'text-brand-cream'}`}>
+          <h1
+            className={`mt-6 font-sans text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl ${isLight ? 'text-brand-navy' : 'text-brand-cream'}`}
+            style={isLight ? undefined : { textShadow: "0 2px 4px rgba(10, 15, 35, 0.42), 0 10px 24px rgba(10, 15, 35, 0.34)" }}
+          >
             Operate with <span className="brand-gradient-text">certainty.</span>
             <br />
             Scale without risk.
           </h1>
 
-          <p className={`mt-6 max-w-2xl text-base leading-relaxed sm:text-lg ${isLight ? 'text-brand-navy/75' : 'text-brand-cream/75'}`}>
+          <p
+            className={`mt-6 max-w-2xl text-base leading-relaxed sm:text-lg ${isLight ? 'text-brand-navy/75' : 'text-brand-cream'}`}
+            style={isLight ? undefined : { textShadow: "3px 2px 20px rgb(10 15 35), 0px 2px 20px rgb(10 15 35)" }}
+          >
             We deploy specialized teams in compliance operations, customer
             support, and sales — regulated-market-ready, brand-aligned, and
             operational from day one.
