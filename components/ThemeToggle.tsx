@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 
 export default function ThemeToggle({ className = "" }: { className?: string }) {
-  const [isLight, setIsLight] = useState(false);
+  const [isLight, setIsLight] = useState(true);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function ThemeToggle({ className = "" }: { className?: string }) 
       onClick={toggle}
       className={`flex h-10 w-10 items-center justify-center rounded-lg border border-brand-cream/20 text-brand-cream transition-colors hover:border-brand-orange/60 hover:text-brand-orange ${className}`}
     >
-      {mounted ? (isLight ? <Moon size={18} /> : <Sun size={18} />) : <Sun size={18} />}
+      {mounted ? (isLight ? <Moon size={18} /> : <Sun size={18} />) : <Moon size={18} />}
     </button>
   );
 }

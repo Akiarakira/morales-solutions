@@ -45,11 +45,11 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${jakarta.variable} ${roboto.variable} h-full antialiased`}
+      className={`${jakarta.variable} ${roboto.variable} h-full antialiased light`}
     >
       <body className="min-h-full flex flex-col">
         <Script id="theme-init" strategy="beforeInteractive">
-          {`try{if(localStorage.getItem("theme")==="light")document.documentElement.classList.add("light")}catch(e){}`}
+          {`try{const theme=localStorage.getItem("theme");document.documentElement.classList.toggle("light",theme!=="dark")}catch(e){}`}
         </Script>
         {children}
       </body>
