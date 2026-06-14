@@ -3,20 +3,31 @@
 import { useState } from "react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
-const AREAS = [
-  "Compliance / Regulatory Operations",
-  "Customer Support",
-  "Sales / Business Development",
-  "Quality Assurance",
-  "Team Lead / Supervision",
+const ENGLISH_LEVELS = [
+  "A1 (Beginner)",
+  "A2 (Elementary)",
+  "B1 (Intermediate)",
+  "B2 (Upper Intermediate)",
+  "C1 (Advanced)",
+  "C2 (Advanced Native)",
+];
+
+const WORK_SCHEDULES = [
+  "Full Time (40 hrs a week)",
+  "Part Time",
+  "Flexible",
+  "Weekends only",
   "Other",
 ];
 
-const EXPERIENCE = [
-  "Less than 1 year",
-  "1–3 years",
-  "3–5 years",
-  "5+ years",
+const COUNTRY_CHANGE_PLANS = ["Yes", "No", "Not sure"];
+
+const WORK_STATUSES = [
+  "Currently unemployed / Looking for a full-time role",
+  "Currently employed / Open to opportunities",
+  "Freelancing / Contractor",
+  "Student",
+  "Other",
 ];
 
 export default function CareersForm() {
@@ -59,55 +70,132 @@ export default function CareersForm() {
       className="rounded-2xl border border-white/10 bg-brand-navy-700/40 p-6 sm:p-8"
     >
       <div className="grid gap-5 sm:grid-cols-2">
-        <Field label="Full name" name="name" required placeholder="Jane Cooper" />
         <Field
-          label="Email"
-          name="email"
+          label="Application email address"
+          name="emailAddress"
           type="email"
           required
           placeholder="you@email.com"
         />
-        <Field label="Phone" name="phone" placeholder="+1 555 000 0000" />
-        <Field label="Location" name="location" placeholder="City, Country" />
-
-        <SelectField
-          label="Area of interest"
-          name="area"
-          required
-          options={AREAS}
-        />
-        <SelectField
-          label="Years of experience"
-          name="experience"
-          required
-          options={EXPERIENCE}
-        />
-
         <Field
-          label="LinkedIn / Portfolio"
-          name="linkedin"
+          label="First name"
+          name="firstName"
+          required
+          placeholder="Jane"
+        />
+        <Field
+          label="Last name"
+          name="lastName"
+          required
+          placeholder="Cooper"
+        />
+        <Field
+          label="Country of residency"
+          name="countryOfResidency"
+          required
+          placeholder="Venezuela"
+        />
+        <Field label="City" name="city" required placeholder="Caracas" />
+        <Field
+          label="Phone"
+          name="phone"
+          type="tel"
+          required
+          placeholder="+58 414 000 0000"
+        />
+        <Field
+          label="Personal email"
+          name="email"
+          type="email"
+          required
+          placeholder="personal@email.com"
+        />
+        <Field
+          label="Work email"
+          name="workEmail"
+          type="email"
+          placeholder="work@email.com"
+        />
+        <Field
+          label="Internet speed test URL"
+          name="speedTestUrl"
           type="url"
-          placeholder="https://linkedin.com/in/…"
+          required
+          placeholder="https://www.speedtest.net/result/..."
         />
         <Field
-          label="Languages"
-          name="languages"
-          placeholder="English (C1), Spanish (Native)"
+          label="Attach CV"
+          name="cv"
+          type="file"
+          required
+        />
+        <Field
+          label="Short video link in English"
+          name="videoLink"
+          type="url"
+          required
+          placeholder="https://www.loom.com/share/..."
+        />
+        <SelectField
+          label="English level"
+          name="englishLevel"
+          required
+          options={ENGLISH_LEVELS}
         />
       </div>
 
-      <div className="mt-5">
-        <label className="block">
-          <span className="mb-1.5 block font-sans text-xs font-semibold uppercase tracking-[0.16em] text-brand-cream/85">
-            Why Morales Solutions?
-          </span>
-          <textarea
-            name="message"
-            rows={4}
-            placeholder="Briefly tell us about your relevant experience and what you're looking for next."
-            className="w-full rounded-md border border-white/10 bg-brand-navy/50 px-4 py-3 text-sm text-brand-cream placeholder:text-brand-cream/35 outline-none transition focus:border-brand-red focus:bg-brand-navy/70"
-          />
-        </label>
+      <div className="mt-5 grid gap-5">
+        <TextAreaField
+          label="Experience (optional)"
+          name="experience"
+          placeholder="Tell us about your relevant work experience."
+        />
+        <TextAreaField
+          label="Internet provider, plan speed, router model, and backup power"
+          name="internetSetup"
+          required
+          placeholder="ISP, Mbps, router model, UPS or other backup power source."
+        />
+      </div>
+
+      <div className="mt-5 grid gap-5 sm:grid-cols-2">
+        <Field
+          label="Monthly payment expectations in USD"
+          name="monthlyPaymentExpectations"
+          required
+          placeholder="$800"
+        />
+        <SelectField
+          label="Current working schedule availability"
+          name="workingScheduleAvailability"
+          required
+          options={WORK_SCHEDULES}
+        />
+        <SelectField
+          label="Plans to change country of residence in 6 months"
+          name="countryChangePlans"
+          required
+          options={COUNTRY_CHANGE_PLANS}
+        />
+        <Field
+          label="Calendly link"
+          name="calendlyLink"
+          type="url"
+          required
+          placeholder="https://calendly.com/..."
+        />
+        <Field
+          label="Salary expectation monthly in $"
+          name="salaryExpectationMonthly"
+          required
+          placeholder="$800"
+        />
+        <SelectField
+          label="Work status"
+          name="workStatus"
+          required
+          options={WORK_STATUSES}
+        />
       </div>
 
       <button
@@ -152,6 +240,34 @@ function Field({
         required={required}
         placeholder={placeholder}
         className="w-full rounded-md border border-white/10 bg-brand-navy/50 px-4 py-2.5 text-sm text-brand-cream placeholder:text-brand-cream/35 outline-none transition focus:border-brand-red focus:bg-brand-navy/70"
+      />
+    </label>
+  );
+}
+
+function TextAreaField({
+  label,
+  name,
+  required,
+  placeholder,
+}: {
+  label: string;
+  name: string;
+  required?: boolean;
+  placeholder?: string;
+}) {
+  return (
+    <label className="block">
+      <span className="mb-1.5 block font-sans text-xs font-semibold uppercase tracking-[0.16em] text-brand-cream/85">
+        {label}
+        {required && <span className="ml-1 text-brand-red">*</span>}
+      </span>
+      <textarea
+        name={name}
+        required={required}
+        rows={4}
+        placeholder={placeholder}
+        className="w-full rounded-md border border-white/10 bg-brand-navy/50 px-4 py-3 text-sm text-brand-cream placeholder:text-brand-cream/35 outline-none transition focus:border-brand-red focus:bg-brand-navy/70"
       />
     </label>
   );
