@@ -64,7 +64,7 @@ export default function AboutPage() {
           className="pointer-events-none absolute -bottom-32 -left-16 h-72 w-72 rounded-full bg-brand-orange/15 blur-3xl"
         />
 
-        <div className="relative mx-auto max-w-7xl px-5 py-12 lg:px-8 lg:py-16">
+        <div className="relative mx-auto max-w-7xl px-5 py-12 sm:py-16 lg:px-8 lg:py-20">
           <div className="max-w-3xl">
             <p className="font-jakarta text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-orange">
               About Morales Solutions
@@ -83,14 +83,14 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="relative bg-surface py-12 sm:py-16">
+      <section className="relative bg-surface py-16 sm:py-20">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-linear-to-br from-surface via-surface to-surface-soft"
         />
 
         <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
-          <div className="py-10 sm:py-12">
+          <div>
             <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16 lg:items-center">
               {/* Image */}
               <div className="relative h-[320px] overflow-hidden rounded-xl lg:h-[420px]">
@@ -153,7 +153,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="relative overflow-hidden bg-brand-navy-light py-12 sm:py-16">
+      <section className="relative overflow-hidden bg-brand-navy-light py-16 sm:py-20">
         <div
           aria-hidden
           className="pointer-events-none absolute top-1/2 left-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-red/5 blur-[120px]"
@@ -226,7 +226,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Philosophy Style */}
-      <section className="relative bg-surface py-10 sm:py-12">
+      <section className="relative bg-surface py-16 sm:py-20">
         {/* Subtle gradient accent */}
         <div
           aria-hidden

@@ -21,7 +21,7 @@ export default function CareersPage() {
     <PageShell>
       <section className="relative overflow-hidden">
         <div className="radial-accent absolute inset-0" aria-hidden />
-        <div className="relative mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
+        <div className="relative mx-auto max-w-7xl px-5 py-12 sm:py-16 lg:px-8 lg:py-20">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
               <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-orange">
@@ -59,10 +59,10 @@ export default function CareersPage() {
                   Talent inquiries
                 </p>
                 <a
-                  href="mailto:talent@moralessolutions.com"
+                  href="mailto:recruitment@morales.solutions"
                   className="mt-2 inline-block text-base font-medium text-brand-cream hover:text-brand-orange"
                 >
-                  talent@moralessolutions.com
+                  recruitment@morales.solutions
                 </a>
               </div>
             </div>

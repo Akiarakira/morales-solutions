@@ -13,9 +13,9 @@ const columns = [
   {
     title: "Solutions",
     links: [
-      { label: "Customer Support", href: "/services" },
-      { label: "Sales Operations", href: "/services" },
-      { label: "Compliance Ops", href: "/services" },
+      { label: "Customer Support", href: "/#services" },
+      { label: "Sales Operations", href: "/#how-we-work" },
+      { label: "Compliance Ops", href: "/#why-us" },
     ],
   },
   {
@@ -45,7 +45,7 @@ export default function Footer() {
               grow.
             </p>
             <Link
-              href="/services"
+              href="/contact"
               className="brand-cta mt-6 px-6 py-3 text-sm"
             >
               Request Services

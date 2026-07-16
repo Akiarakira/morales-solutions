@@ -1,5 +1,5 @@
-Contact: mailto:security@moralessolutions.com
+Contact: mailto:security@morales.solutions
 Expires: 2027-06-10T12:00:00.000Z
-Encryption: https://moralessolutions.com/security
+Encryption: https://morales.solutions/security
 Preferred-Languages: en
-Policy: https://moralessolutions.com/security
+Policy: https://morales.solutions/security

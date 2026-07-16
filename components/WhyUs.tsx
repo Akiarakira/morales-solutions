@@ -4,7 +4,7 @@ import { Shield } from 'lucide-react'
 
 export default function WhyUs() {
   return (
-    <section id="why-us" className="py-24 bg-brand-navy-light relative overflow-hidden">
+    <section id="why-us" className="pt-16 sm:pt-20 bg-brand-navy-light relative overflow-hidden">
       {/* Background Accent */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-red/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="relative z-10 mx-auto max-w-7xl px-5 lg:px-8">

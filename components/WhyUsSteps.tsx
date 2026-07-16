@@ -29,7 +29,7 @@ const steps = [
 
 export default function WhyUsSteps() {
   return (
-    <section id="how-we-work" className="relative scroll-mt-24 overflow-hidden bg-brand-navy-light py-24 sm:py-32">
+    <section id="how-we-work" className="relative scroll-mt-24 overflow-hidden bg-brand-navy-light py-16 sm:py-20">
       <div
         aria-hidden
         className="pointer-events-none absolute top-1/2 left-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-red/5 blur-[120px]"

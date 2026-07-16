@@ -21,7 +21,7 @@ export default function ContactPage() {
     <PageShell>
       <section className="relative overflow-hidden">
         <div className="radial-accent absolute inset-0" aria-hidden />
-        <div className="relative mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
+        <div className="relative mx-auto max-w-7xl px-5 py-12 sm:py-16 lg:px-8 lg:py-20">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
               <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-orange">
@@ -57,10 +57,10 @@ export default function ContactPage() {
                   Prefer to reach out directly?
                 </p>
                 <a
-                  href="mailto:hello@moralessolutions.com"
+                  href="mailto:hello@morales.solutions"
                   className="mt-2 inline-block text-base font-medium text-brand-cream hover:text-brand-orange"
                 >
-                  hello@moralessolutions.com
+                  hello@morales.solutions
                 </a>
               </div>
             </div>

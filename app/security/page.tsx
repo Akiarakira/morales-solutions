@@ -52,8 +52,8 @@ export default function SecurityPage() {
           <p>
             If you discover a security vulnerability on this site, please report
             it immediately to{' '}
-            <a className="text-brand-red hover:underline" href="mailto:security@moralessolutions.com">
-              security@moralessolutions.com
+            <a className="text-brand-red hover:underline" href="mailto:security@morales.solutions">
+              security@morales.solutions
             </a>.
           </p>
         </section>

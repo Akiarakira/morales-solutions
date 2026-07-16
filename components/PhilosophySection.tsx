@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function PhilosophySection() {
   return (
-    <section className="relative bg-surface py-12 sm:py-16">
+    <section className="relative bg-surface py-16 sm:py-20">
       {/* Subtle gradient accent */}
       <div
         aria-hidden

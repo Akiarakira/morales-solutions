@@ -19,7 +19,7 @@ export default function TwoBlocks() {
   return (
     <section
       id="services"
-      className="relative scroll-mt-24 bg-brand-navy-light py-24 sm:py-32"
+      className="relative scroll-mt-24 bg-brand-navy-light py-16 sm:py-20"
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="mb-14 max-w-3xl">

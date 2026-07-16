@@ -57,7 +57,7 @@ export default function PrivacyPage() {
           <p>
             Depending on your location, you may have the right to access,
             update, or delete your personal data. To exercise these rights,
-            contact us at <a className="text-brand-red hover:underline" href="mailto:contact@moralessolutions.com">contact@moralessolutions.com</a>.
+            contact us at <a className="text-brand-red hover:underline" href="mailto:hello@morales.solutions">hello@morales.solutions</a>.
           </p>
         </section>
       </LegalLayout>
