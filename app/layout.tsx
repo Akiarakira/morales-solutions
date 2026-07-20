@@ -17,6 +17,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://morales.solutions"),
   title:
     "Morales Solutions — Compliant Outsourcing Teams for Support, Sales & Compliance",
   description:
@@ -38,6 +39,20 @@ export const metadata: Metadata = {
     description:
       "Deploy specialized, compliance-ready teams for support, sales, and operations — operational from day one.",
     type: "website",
+    images: [
+      {
+        url: "/og-morales-1.png",
+        width: 1200,
+        height: 630,
+        alt: "Morales Solutions — Compliant Outsourcing Teams",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Morales Solutions — Compliant Outsourcing Teams",
+    description:
+      "Deploy specialized, compliance-ready teams for support, sales, and operations.",
     images: ["/og-morales-1.png"],
   },
 };
