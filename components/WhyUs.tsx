@@ -38,7 +38,7 @@ export default function WhyUs() {
             className="pointer-events-none absolute -bottom-32 -left-16 h-72 w-72 rounded-full bg-brand-orange/15 blur-3xl"
           />
 
-          <div className="relative z-10 grid min-h-[520px] grid-cols-1 gap-px  md:grid-cols-2">
+          <div id="comparisonGrid" className="relative z-10 grid min-h-[520px] grid-cols-1 gap-px  md:grid-cols-2">
             {/* Traditional Outsourcing */}
             <div className="flex h-full flex-col justify-center bg-brand-navy-light/5 p-8 sm:p-10">
               <span className="font-jakarta text-xs font-bold uppercase tracking-[0.2em] text-brand-cream/40">
@@ -52,7 +52,7 @@ export default function WhyUs() {
 
             {/* Morales Solutions */}
             <div className="relative flex h-full flex-col justify-center bg-brand-navy-700/5 p-8 sm:p-10">
-              <div className="absolute left-0 top-0 h-full w-1 bg-linear-to-b from-brand-red to-brand-orange" />
+              <div className="absolute left-0 top-0 h-1 w-full bg-linear-to-r from-brand-red to-brand-orange md:h-full md:w-1 md:bg-linear-to-b" />
               <span className="font-jakarta text-xs font-bolder uppercase tracking-[0.2em] text-brand-orange">
                 Morales Solutions
               </span>
